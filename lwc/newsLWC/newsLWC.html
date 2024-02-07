@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="slds-grid slds-gutters slds-wrap justify-center">
-            <template for:each={resulte} for:item="item">
+            <template for:each={resulte} for:item="item" if:true={item.urlToImage}>
                 <div class="card" key={item.id}>
                     <img class="card-image" src={item.urlToImage} />
                     <div class="card-text">
@@ -12,7 +12,7 @@
                 </div>
             </template>
         </div>
-    </div>
+    </div>G
     <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
         aria-describedby="modal-content-id-1" class={modalClass}>
         <div class="slds-modal__container">
